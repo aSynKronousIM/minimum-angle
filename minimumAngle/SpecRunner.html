@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Mocha Spec Runner</title>
+  <link rel="stylesheet" href="../lib/mocha/mocha.css">
+  <script src="../lib/jquery.js"></script>
+  <script src="../lib/mocha/mocha.js"></script>
+  <script src="../lib/chai/chai.js"></script>
+  <script src="../lib/sinon/sinon.js"></script>
+  <script>
+    mocha.setup('bdd');
+    var expect = chai.expect;
+    $(function() {
+      window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
+    });
+  </script>
+
+  <!-- Spec files -->
+  <script src="../spec/minimumAngleSpec.js"></script>
+
+  <!-- Source files -->
+  <script src="../minimumAngle/minimumAngle.js"></script>
+
+</head>
+
+<body>
+  <div id="mocha"></div>
+</body>
+</html>
